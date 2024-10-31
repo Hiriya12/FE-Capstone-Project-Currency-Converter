@@ -5,24 +5,25 @@ import NavBar from './components/NavBar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Footer from './components/Footer';
+import FavoriteCurrencyPairs from './components/FavoriteCurrencyPairs';
 function App() { 
-  // currencies: https://v6.exchangerate-api.com/v6/0029b7b8238cee301c198867/latest/USD
-  // max-w-xl mx-auto conversion: https://v6.exchangerate-api.com/v6/0029b7b8238cee301c198867/pair/EUR/GBP
-
+ 
   return (
+    <div className=''>
     <Router basename="/">
       <NavBar />
-      <div className='min-h-screen bg-gray-100 font-family-teachers rounded-lg flex flex-col items-center justify-center '>
-        <div className='container'>
+      <div className='min-h-screen  font-family-teachers rounded-lg flex flex-col items-center justify-center '>
+   
           <Currency_Converter />  
-          
-        </div>
+      
+  
       </div>
       
+      <FavoriteCurrencyPairs />
       <Footer />
     
     </Router>
-  
+  </div>
   );
 }
 

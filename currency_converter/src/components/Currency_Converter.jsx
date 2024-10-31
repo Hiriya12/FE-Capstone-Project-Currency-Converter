@@ -14,8 +14,8 @@ const Currency_Converter = () => {
 
   const fetchCurrencies = async () => {
     try {
-    //  const res = await fetch('https://v6.exchangerate-api.com/v6/5b8902368ceafabec84910c9/latest/USD');
-      const data = await res.json();
+    const res = await fetch('https://v6.exchangerate-api.com/v6/5b8902368ceafabec84910c9/latest/USD');
+     const data = await res.json();
       setCurrencies(Object.keys(data.conversion_rates));
       setConversionRates(data.conversion_rates);
     } catch (error) {
@@ -105,12 +105,10 @@ const Currency_Converter = () => {
   };
 
   return (
-    <div className='flex justify-center overflow-hidden w-full '>
-       <div className="bg-[url('public/image/photo.png')] bg-auto bg-top bg-right bg-no-repeat w-full min-h-[500px] sm:h-[600px] md:h-[700px] shadow-md relative">
-          {/* <div className='w-full sm:w-[90%] md:w-[85%] lg:w-[80%] max-w-[1148px] h-auto mx-auto p-6 rounded-[50px] mb-5 text-xl bg-secondary mt-3'> */}
-              <div className='bg-light border-[rgba(144,230,144,1)] border-8  relative p-6 sm:p-8 md:p-10 shadow-lg max-w-full md:max-w-[900px] lg:max-w-[1130px] h-auto mx-auto my-10 rounded-[50px] md:rounded-[75px] mb-5 text-xl text-black-200'>
-                    <div className='p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-end'>
-
+    // <div className='relative flex justify-center overflow-hidden w-full h-auto shadow-md bg-transparent'>
+  <div className='relative z-10 border-[rgba(144,230,144,1)] border-8 p-4 sm:p-6 md:p-8 lg:p-10 shadow-lg max-w-screen-md lg:max-w-screen-lg h-auto mx-auto my-6 sm:my-8 md:my-10 rounded-[20px] sm:rounded-[30px] md:rounded-[50px] lg:rounded-[75px] text-xl text-black-200 bg-light'>
+    <div className='p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-end'>
+    
             <CurrencyDropdown
               favorites={favorites}
               currencies={currencies}
@@ -172,9 +170,7 @@ const Currency_Converter = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  // </div>
+      // </div>
   );
 };
 

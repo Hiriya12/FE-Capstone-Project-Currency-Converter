@@ -11,10 +11,32 @@ const Darkmode_button = () => {
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark');
-      document.body.style.backgroundColor = "darkgreen"; // Change body background to dark green
+      document.body.style.backgroundColor = "black"; 
+
+      const footer = document.querySelector("footer"); 
+      if (footer) footer.style.backgroundColor = "lightgreen"; 
+      footer.style.color = "#333333";
+      const favoriteCurrencyPairs = document.getElementById("favorite"); 
+      if (favoriteCurrencyPairs) {
+        favoriteCurrencyPairs.style.backgroundColor = "lightgreen"; 
+      }
+
+      const nav = document.querySelector("nav");
+      if (nav) nav.style.backgroundColor = "lightgreen"; 
     } else {
       document.documentElement.classList.remove('dark');
-      document.body.style.backgroundColor = ""; // Reset background color
+      document.body.style.backgroundColor = "white"; 
+
+      const footer = document.querySelector("footer"); 
+      if (footer) footer.style.backgroundColor = "";
+
+      const favoriteCurrencyPairs = document.getElementById("favorite"); 
+      if (favoriteCurrencyPairs) {
+        favoriteCurrencyPairs.style.backgroundColor = ""; 
+      }
+
+      const nav = document.querySelector("nav");
+      if (nav) nav.style.backgroundColor = "";
     }
   }, [darkMode]);
 
@@ -23,8 +45,7 @@ const Darkmode_button = () => {
       onClick={toggleDarkMode}
       className="p-2 text-5xl duration-300"
       style={{
-        background: darkMode ? "darkgreen" : "transparent", // Change button background in dark mode
-        color: darkMode ? "lightgray" : "black" // Change icon color in dark mode
+        color: darkMode ? "black" : "black" 
       }}
     >
       {darkMode ? <HiMoon /> : <HiOutlineMoon />}

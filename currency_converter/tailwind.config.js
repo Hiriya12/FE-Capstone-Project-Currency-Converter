@@ -15,11 +15,12 @@ export default {
       transparent: 'transparent',
       primary: "#18AF15",//green
       secondary: "#30DC2D", //light green
-      dark: "#081207", //bllack
+      dark: "#081207", //black
       light: "#FFFFFF",
       darkgreen: "#013220",
       darkgray:"#a6a6a6",
-      lightgray:"#cccccc"
+      lightgray:"#cccccc",
+      lightgreen: "#a9fccf"
     },
     container: {
       center: true,
