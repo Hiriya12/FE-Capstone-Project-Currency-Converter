@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="footer bottom-0 left-0 w-full bg-dark text-light p-4 sm:p-6 md:p-8 lg:p-10 text-center font-sans">
       <h5>Contact me </h5>
       <div className="flex justify-center items-center h-16 w-16 rounded-full gap-4 mx-auto">
-      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://wa.me/+251961643564" target="_blank" rel="noopener noreferrer">
         <FaWhatsapp className="text-blue-600 text-2xl hover:text-blue-800" />
       </a>
       <a href="https://x.com/HiriyaGirma" target="_blank" rel="noopener noreferrer">
